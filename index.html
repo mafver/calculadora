@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="extras.css">
+    <!-- Añadimos los enlaces de mathjax-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <h2>Calculadora en línea.</h2>
+    <input type="text" id="tablero">
+    <div id="container">
+        <table>
+            <!--
+            <tr>
+                <td colspan="10"><input type="text" id="tablero"></td>
+            </tr>
+            -->
+            <tr>
+                <td colspan="2"><button id="izquierda" class="oper_mov">$$\leftarrow$$</button></td>
+                <td colspan="2"><button id="derecha" class="oper_mov">$$\rightarrow$$</button></td>
+                <td><button id="π" class="constante">$$\pi$$</button></td>
+                <td><button id="exp" class="constante">$$e$$</button></td>
+                <td><button id="(" class="agrup">$$($$</button></td>
+                <td><button id=")" class="agrup">$$)$$</button></td>
+                <td><button id="backspace" class="borrar">Del</button></td>
+                <td><button id="clear" class="borrar">C</button></td>
+                
+            </tr>
+
+            <tr>
+                <td><button id="sin" class="oper_trig">$$\sin$$</button></td>
+                <td><button id="sinh" class="oper_trig">$$\sinh$$</button></td>
+                <td><button id="asin" class="oper_trig">$$\sin^{-1}$$</button></td>
+                <td><button id="raizn" class="oper_exp">$$\sqrt[n]{x}$$</button></td>
+                <td><button id="^" class="oper_exp">$$x^{n}$$</button></td>
+                <td><button id="7" class="num">7</button></td>
+                <td><button id="8" class="num">8</button></td>
+                <td><button id="9" class="num">9</button></td>
+                <td><button id="÷" class="oper">&#247</button></td>
+                <td><button id="%" class="porcent">%</button></td>
+            </tr>
+            <tr id=line_3>
+                <td><button id="cos" class="oper_trig">$$\cos$$</button></td>
+                <td><button id="cosh" class="oper_trig">$$\cosh$$</button></td>
+                <td><button id="acos" class="oper_trig">$$\cos^{-1}$$</button></td>
+                <td><button id="raiz3" class="oper_exp">$$\sqrt[3]{x}$$</button></td>
+                <td><button id="^3" class="oper_exp">$$x^{3}$$</button></td>
+                <td><button id="4" class="num">4</button></td>
+                <td><button id="5" class="num">5</button></td>
+                <td><button id="6" class="num">6</button></td>
+                <td><button id="*" class="oper">*</button></td>
+                <td rowspan="3" id="row_equal"><button id="igual" class="calculo">=</button></td>
+            </tr>
+            <tr>
+                <td><button id="tan" class="oper_trig">$$\tan$$</button></td>
+                <td><button id="tanh" class="oper_trig">$$\tanh$$</button></td>
+                <td><button id="atan" class="oper_trig">$$\tan^{-1}$$</button></td>
+                <td><button id="raiz2" class="oper_exp">$$\sqrt[2]{x}$$</button></td>
+                <td><button id="^2" class="oper_exp">$$x^{2}$$</button></td>
+                <td><button id="1" class="num">1</button></td>
+                <td><button id="2" class="num">2</button></td>
+                <td><button id="3" class="num">3</button></td>
+                <td><button id="-" class="oper">-</button></td>
+                
+            </tr>
+            <tr>
+                <td><button id="log" class="oper_exp">$$\log$$</button></td>
+                <td><button id="ln" class="oper_exp">$$\ln$$</button></td>
+                <td><button id="exp" class="oper_exp">$$e^{n}$$</button></td>
+                <td><button id="abs" class="oper_exp">$$\left | x \right |$$</button></td>
+                <td><button id="ans" class="guardar">Ans</button></td>
+                <td><button id="0" class="num">0</button></td>
+                <td><button id="." class="num">.</button></td>
+                <td><button id="*10^" class="oper_exp">$$10^{n}$$</button></td>
+               
+                <td><button id="+" class="oper">+</button></td>
+            </tr>
+            
+        </table>
+        <!-- Añadimos las condiciones de radianes -->
+        <form id="form_grados">
+            <label class="lab_grado">
+                <input type="radio" name="grados" class="grado" id="deg" value="deg" checked>
+                Deg
+            </label>
+            <label class="lab_grado">
+                <input type="radio" name="grados" class="grado" id="rad" value="rad">
+                Rad
+            </label> 
+            <label for="datos_alm" class="lab_data">Datos anteriores.</label>
+            <select name="datos_alm" id="datos_alm"></select>
+        </form>
+        
+
+
+    </div>
+    <script src="operaciones.js?1.01"></script>
+    <script src="basico.js?1.01"></script>
+    <script src="index.js?1.01"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+.oper{
+    font-size: 1.5rem;
+}
+.lab_data{
+    font-size: 1.5rem;
+    margin-left: 80px; 
+}
+
+#datos_alm{
+    width: 40%;
+    font-size: 1.5rem;
+    
+    text-align-last:center;
+    padding-right: 29px;
+    background-color: rgb(99, 168, 236);
+    padding: .4em 1.4em .3em .8em;
+    max-width: 100%; 
+    margin: 20px auto;
+    border: 2px solid #aaa;
+    box-shadow: 5px rgba(0,0,0,.03);
+    border-radius: 10px;
+}
+
+#datos_alm :root {
+    --select-border: #777;
+    --select-focus: blue;
+    --select-arrow: var(--select-border);
+  }
+
+.select::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+option{
+    text-indent: 100px;
+    padding: 30px;
+
+
+}
